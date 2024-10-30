@@ -2,7 +2,7 @@
     display: grid;
     gap: 16px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 118px auto 0;
+    margin: 118px auto 92px;
 }
 
 .photo-grid__item {
@@ -10,25 +10,26 @@
     width: 100%;
     height: auto;
 }
+
 @media  screen and (max-width: 1024px) {
     .photo-grid {
         grid-template-columns: 1fr 1fr;
-        margin-top: 64px;
+        margin: 64px auto 88px;
     }
     .photo-grid__item {
         max-width: 352px;
         width: 100%;
     }
 }
+
 @media screen and (max-width: 544px) {
     .photo-grid {
         grid-template-columns: 1fr;
-        margin-top: 38px;
+        margin: 38px auto 62px;
         gap: 12px;
     }
     .photo-grid__item {
         max-width: 288px;
         width: 100%;
     }
-}
 }
