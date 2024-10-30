@@ -145,6 +145,17 @@
 
 }
 
+@media screen and (max-width: 768px) {
+    .places__container {
+        margin: 0 24px 50px;
+        max-width: 720px;
+        width: 100%;
+        max-height: 635px;
+        height: 100%;
+        gap: 48px 28px;
+    }
+}
+
 @media screen and (max-width: 544px) {
     .places__container{
         max-width: 320px;
@@ -205,5 +216,12 @@
     .places__item {
         grid-area: item;
         box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .places__container {
+        margin-left: 16px;
+        margin-right: 16px;
     }
 }
