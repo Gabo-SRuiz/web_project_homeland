@@ -10,3 +10,10 @@
     font-family: "Inter", Arial, sans-serif;
     font-weight: bold;
 }
+
+@font-face {
+    src: url(./fonts/web/Inter-Black.woff2);
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: bolder;
+
+}
