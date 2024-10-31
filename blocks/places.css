@@ -1,105 +1,80 @@
 .places__container {
-    max-width: 984px;
-    width: 100%;
-    max-height: 756px;
-    height: 100%;
+    max-width: 70%;
     display: grid;
-    gap: 48px 40px;
+    gap: 48px;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 2fr 4fr 1fr;
-    grid-template-areas: 
-    "title website"
-    "image item"
-    "button .";
+    grid-template-rows: .5fr 1fr .5fr;
     box-sizing: content-box;
     margin: 0 auto 80px;
+    grid-template-areas: 
+    "title website"
+    "image paragraph"
+    "button .";
+}
+
+.places__item {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
 }
 
 .places__title {
-    max-width: 450px;
-    width: 100%;
-    max-height: 152px;
-    height: 100%;
     font-weight: bolder;
     font-size: 72px;
-    line-height: 106%;
+    line-height: 1.15;
     color: #FFFFFF;
     margin: 0;
-    grid-area: title;
 }
 
 .places__image {
     max-width: 460px;
-    width: 100%;
+    min-width: 0;
     max-height: 460px;
-    height: 100%;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column: 1;
+    min-height: 0;
+    width: 100%;
     box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
-    grid-area: image;
     object-fit: cover;
 }
 
-.places__website {
-    max-width: 455.53px;
-    width: 100%;
-    max-height: 22px;
-    height: 100%;
-    font-style: normal;
-    font-weight: normal;
+.places__artist {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.5;
     color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    grid-area: website;
+    padding: 0;
+    margin: 0;
 }
 
-.places__website-url {
-    width: 100%;
-    font-style: normal;
-    font-weight: 400;
+.places__url-heading {
     font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.12em;
+    line-height: 1.15;
     text-transform: uppercase;
     color: #AAAAAA;
     text-decoration: none;
+    margin-bottom: 8px;
 }
 
 .places__paragraph {
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 163%;
+    line-height: 1.5;
     color: #FFFFFF;
-    margin: 0;
+    margin-top: 0;
 }
 
-.places__item {
-    display: flex;
-    flex-direction: column;
-    grid-area: item;
-    row-gap: 25px;
-    box-sizing: border-box;
-    margin: 0;
-    grid-row: span 2;
-}
 
 .places__button {
-    max-width: 289px;
-    width: 100%;
-    max-height: 48px;
-    height: 100%;
+    width: max-content;
     padding: 13px 20px;
-    height: auto;
     background: linear-gradient(90deg, #0278FE 0%, #003A7B 99.98%);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
     color: #FFFFFF;
     border: 0;
-    grid-area: button;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.15;
+    text-align: center;
 
 }
 
@@ -107,8 +82,35 @@
     background: linear-gradient(90deg, #0278fe40 0%, #003a7b40 99.98%);
 }
 
+.places__item:nth-child(1) {
+    display: flex;
+    align-items: flex-end;
+    grid-area: title;
+}
+
+.places__item:nth-child(2) {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.places__item:nth-child(3) {
+    grid-area: image;
+}
+
+.places__item:nth-child(4) {
+    grid-row: span 2;
+    margin: 0 0 30px;
+    grid-area: paragraph;
+}
+
+.places__item:nth-child(5) {
+    grid-area: button;
+}
+
 @media screen and (max-width: 1024px) {
     .places__container {
+        max-width: 720px;
         row-gap: 28px;
         grid-template-rows: 1fr 4fr 3fr;
         margin: 0 auto 50px;
@@ -149,9 +151,6 @@
     .places__container {
         margin: 0 24px 50px;
         max-width: 720px;
-        width: 100%;
-        max-height: 635px;
-        height: 100%;
         gap: 48px 28px;
     }
 }
@@ -159,12 +158,9 @@
 @media screen and (max-width: 544px) {
     .places__container{
         max-width: 320px;
-        width: 100%;
-        max-height: 1261px;
-        height: 100%;
         gap: 30px;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: max-content;
         grid-template-areas: 
         "title"
         "website"
@@ -178,7 +174,7 @@
     .places__title {
         max-width: 288px;
         width: 100%;
-        max-height: 35px;
+        min-height: 0;
         height: 100%;
         font-style: normal;
         font-weight: 900;
@@ -221,6 +217,7 @@
 
 @media screen and (max-width: 320px) {
     .places__container {
+        max-width: 320px;
         margin-left: 16px;
         margin-right: 16px;
     }
