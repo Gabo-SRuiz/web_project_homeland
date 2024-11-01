@@ -2,11 +2,12 @@
     display: grid;
     gap: 16px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 118px auto 92px;
+    margin: 118px 4% 92px;
 }
 
 .photo-grid__item {
     max-width: 284px;
+    min-height: 0;
     width: 100%;
     height: auto;
 }
@@ -14,7 +15,7 @@
 @media  screen and (max-width: 1024px) {
     .photo-grid {
         grid-template-columns: 1fr 1fr;
-        margin: 64px auto 88px;
+        margin: 64px 4% 88px;
     }
     .photo-grid__item {
         max-width: 352px;
