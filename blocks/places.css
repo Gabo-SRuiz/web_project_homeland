@@ -171,7 +171,8 @@
         width: 288px;
         font-weight: 400;
         font-size: 12px;
-        line-height: 15px
+        line-height: 15px;
+        padding-left: 1rem;
     }
 
     .places__artist {
@@ -179,6 +180,7 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
+        padding-left: 1rem;
     }
 
     .places__image {
@@ -219,6 +221,7 @@
         font-weight: 900;
         font-size: 32px;
         line-height: 35px;
+        padding-left: 1rem;
     }
     
     .places__paragraph {
@@ -226,6 +229,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 163%;
+        padding-left: 1rem;
     }
 
     .places__button {
